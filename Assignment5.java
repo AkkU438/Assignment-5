@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.io.*;
+import java.util.NoSuchElementException;
+
 
 
 
@@ -29,16 +31,18 @@ public class Assignment5 {
             Scanner scanner3 = new Scanner(new File(filename2));
             int rows = scanner1.nextInt();
             int cols = scanner1.nextInt();
-            int rows2 = scanner.nextInt();;
-            int cols2 = scanner.nextInt();
+           
             matrix1 = new int[rows][cols];
-            matrix2 = new int[rows2][cols2];
+            
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < cols; j++) {
                     matrix1[i][j] = scanner1.nextInt();
                     
                 }
             }
+            int rows2 = scanner3.nextInt();
+            int cols2 = scanner3.nextInt();
+            matrix2 = new int[rows2][cols2];
             for (int i = 0; i < rows2; i++) {
                 for (int j = 0; j < cols2; j++) {
                     
@@ -63,7 +67,7 @@ public class Assignment5 {
             }
             System.out.println("]");
         }
-        writeMatrixToFile(matrix3, "matrix5.txt");
+        writeMatrixToFile(matrix3, "matrix3.txt");
             
             System.out.println("Matrices written to files successfully!");
         } catch (IOException e) {
